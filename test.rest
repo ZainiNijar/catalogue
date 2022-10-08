@@ -1,0 +1,31 @@
+###Register
+POST http://127.0.0.1:8000/api/auth/register
+content-type: application/json
+
+{
+    "name" : "Ahmad Zaini Nijar",
+    "email": "zaininijar7610@gmail.com",
+    "password": "secret123"
+}
+
+###Login
+POST http://127.0.0.1:8000/api/auth/login
+content-type: application/json
+
+{
+    "email": "zaininijar7610@gmail.com",
+    "password": "secret123"
+}
+
+###Me
+POST http://127.0.0.1:8000/api/auth/me
+content-type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyMDA3NjksImV4cCI6MTY2NTIwNDM2OSwibmJmIjoxNjY1MjAwNzY5LCJqdGkiOiJQOUVVZUZJZEFiU21uUHNzIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RNBfUTJWUTQo9ETOxnz4smmmXmCBwY9afAViwVlYoYE
+
+###Me
+POST http://127.0.0.1:8000/api/auth/logout
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTY2NTIwMTM4OSwiZXhwIjoxNjY1MjA0OTk5LCJuYmYiOjE2NjUyMDEzOTksImp0aSI6Ikd4SFZBQ3FLdWduYmpSak8iLCJzdWIiOiIzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.lc72VIKtRxgqAJXlbaeV98j39nv40fJA2c0Q2wIo3Vc
+
+###Refresh Token
+POST http://127.0.0.1:8000/api/auth/refresh
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyMDEzODksImV4cCI6MTY2NTIwNDk4OSwibmJmIjoxNjY1MjAxMzg5LCJqdGkiOiJIMXNkT1FsejBDWHdraGlYIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q67I5PTbLSiWR4U4d1oT6i06Eqc9lqQ3tkjB1VpTxCM
