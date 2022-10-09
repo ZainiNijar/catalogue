@@ -29,3 +29,88 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vM
 ###Refresh Token
 POST http://127.0.0.1:8000/api/auth/refresh
 Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyMDEzODksImV4cCI6MTY2NTIwNDk4OSwibmJmIjoxNjY1MjAxMzg5LCJqdGkiOiJIMXNkT1FsejBDWHdraGlYIiwic3ViIjoiMyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.Q67I5PTbLSiWR4U4d1oT6i06Eqc9lqQ3tkjB1VpTxCM
+
+###Category -> Store
+POST http://127.0.0.1:8000/api/product/category
+content-type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyMDU2MTgsImV4cCI6MTY2NTIwOTIxOCwibmJmIjoxNjY1MjA1NjE4LCJqdGkiOiJmWTVyeUZJQ203Ukc3ekVUIiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.3q_cKPJ4n4wVdZ5bZfDgkPPObMNn2bDondDPIV2wWDc
+
+# {
+#     "name": "Shoes",
+#     "description" : "Lorem ipsum dolor sit amet"
+# }
+
+# {
+#     "name": "Shirt",
+#     "description" : "Lorem ipsum dolor sit amet"
+# }
+
+{
+    "name": "Muslimah",
+    "description" : "Lorem ipsum dolor sit amet"
+}
+
+###Show All`
+GET http://127.0.0.1:8000/api/product/category
+
+###Show
+GET http://127.0.0.1:8000/api/product/category/1
+
+###Update
+PUT http://127.0.0.1:8000/api/product/category/1
+content-type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyODQ1OTQsImV4cCI6MTY2NTI4ODE5NCwibmJmIjoxNjY1Mjg0NTk0LCJqdGkiOiJRSUtnVnZ5a0hDMFBMODc3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.F6i-2g_uxXsucpXMghpNpoBlWjob6dWfaJ2saE1--Z4
+
+{
+    "name": "Shoes Updated Lagi",
+    "description": "Lorem ipsum dolor sit amet"
+}
+
+###Delete
+DELETE http://127.0.0.1:8000/api/product/category/2
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyODQ1OTQsImV4cCI6MTY2NTI4ODE5NCwibmJmIjoxNjY1Mjg0NTk0LCJqdGkiOiJRSUtnVnZ5a0hDMFBMODc3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.F6i-2g_uxXsucpXMghpNpoBlWjob6dWfaJ2saE1--Z4
+
+
+###Product->show-all
+GET http://127.0.0.1:8000/api/product
+
+###Store
+POST http://127.0.0.1:8000/api/product
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyODQ1OTQsImV4cCI6MTY2NTI4ODE5NCwibmJmIjoxNjY1Mjg0NTk0LCJqdGkiOiJRSUtnVnZ5a0hDMFBMODc3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.F6i-2g_uxXsucpXMghpNpoBlWjob6dWfaJ2saE1--Z4
+
+{
+    "user_id": 1,
+    "category_id": 1,
+    "name": "Jaket Erigo",
+    "pictures": "jaket.jpg",
+    "size": "X,L,M,XXL",
+    "price": 50000,
+    "description": "Lorem ipsum dolor sit amet, consectetur"
+}
+
+###Show
+GET http://127.0.0.1:8000/api/product/1
+
+###Show-All
+GET http://127.0.0.1:8000/api/product
+
+###Update
+PUT http://127.0.0.1:8000/api/product/1
+Content-Type: application/json
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyODQ1OTQsImV4cCI6MTY2NTI4ODE5NCwibmJmIjoxNjY1Mjg0NTk0LCJqdGkiOiJRSUtnVnZ5a0hDMFBMODc3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.F6i-2g_uxXsucpXMghpNpoBlWjob6dWfaJ2saE1--Z4
+
+{
+    "user_id": 1,
+    "category_id": 1,
+    "name": "Jaket Erigo Updated Lagi",
+    "pictures": "jaket.jpg",
+    "size": "X,L,M,XXL",
+    "price": 50000,
+    "description": "Lorem ipsum dolor sit amet, consectetur"
+}
+
+###Delete
+DELETE http://127.0.0.1:8000/api/product/1
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2NjUyODQ1OTQsImV4cCI6MTY2NTI4ODE5NCwibmJmIjoxNjY1Mjg0NTk0LCJqdGkiOiJRSUtnVnZ5a0hDMFBMODc3Iiwic3ViIjoiMSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.F6i-2g_uxXsucpXMghpNpoBlWjob6dWfaJ2saE1--Z4
+

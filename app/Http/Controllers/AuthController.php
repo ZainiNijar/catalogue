@@ -30,7 +30,7 @@ class AuthController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return ResponseFormatter::error(null, $validator->messages(), 403);
+            return ResponseFormatter::error(null, $validator->messages(), 422);
         }
 
         $user = User::create([
@@ -42,7 +42,7 @@ class AuthController extends Controller
         if ($user) {
             return ResponseFormatter::success($user, 'Register Successfully');
         } else {
-            return ResponseFormatter::error(null, 'Register Failed', 403);
+            return ResponseFormatter::error(null, 'Register Failed', 409);
         }
     }
 
